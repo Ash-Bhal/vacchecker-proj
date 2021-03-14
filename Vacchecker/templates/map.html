@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacchecker</title>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    {% endblock %}
+    
+</head>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="test">Frequency Map</a>
+        <a href="test">AI Fact check</a>
+    </nav>
+</header>
+
+<body>
+    <div class="map">
+     <h2>Vaccine Misinformation Map Based on Tweets</h2>
+     <div class="state">
+        <form action="" class="search-bar">
+            <input type="search" name="search" pattern=".*\S.*" required>
+            <button class="search-btn" type="submit">
+                <span>Enter a state</span>
+            </button>
+        </form>
+     </div>
+     <div id="mapcontainer"></div>
+    </div>
+
+    <div id="tweetchecker">
+        <div class="tweetlink">
+            <h2>Check if a vaccine tweet is factual</h2>
+            <form action="" class="search-bar">
+                <input type="search" name="search" pattern=".*\S.*" required>
+                <button class="search-btn" type="submit">
+                    <span>Enter a twitter link</span>
+                </button>
+            </form>
+        </div>
+        
+        
+    </div>
+   
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  {% endblock %}
+  <title>Vacchecker</title>
+</head>
+<header>
+        <nav> 
+          <a href="/">Home</a>
+          <a href="/map">Frequency Map</a>
+          <a href="/map">AI Fact check</a>
+        </nav>
+  </header>
+<body>
+  <img src="./static/pic/logo.png" class="logo">
+  <div class="title">
+   <h1>Vacchecker</h1>
+   <h3 id="tagline">A machine learning website that automatically analyzes tweets for vaccine misinformation</h3>
+  </div>
+  <div class="buttonhome">
+    <a href="/map" class="homebutton" id="mapbutton">Frequency Map</a>
+    <a href="/map" class="homebutton" id="tweetbutton">Factcheck</a>
+  </div>
+  <div class="about">
+    <h2>What does it do?</h2>
+    <img src="./static/pic/about.png" class="aboutpic">
+  </div>
+</body>
+</html>
+
